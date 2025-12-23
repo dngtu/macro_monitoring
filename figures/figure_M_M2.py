@@ -70,7 +70,6 @@ def make_figure_M_M2(fig_no=None, save=False):
         pos_bottom += np.where(v >= 0, v, 0)
         neg_bottom += np.where(v < 0, v, 0)
 
-    
     ax.plot(
         df_line["date"],
         df_line["D12_M2"],
