@@ -28,7 +28,7 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
 
     sns.set_theme(style="white", font="Times New Roman")
 
-    fig, ax = plt.subplots(figsize=(10, 8), dpi=200)
+    fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 
     sns.barplot(
         data=df_long,
