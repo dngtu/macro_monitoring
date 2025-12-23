@@ -41,9 +41,7 @@ def make_figure_M_M2(fig_no=None, save=False):
 
     period = f"{m_start}/{y_start}-{m_max}/{y_max}"
  
-    title_core = "Tăng tổng phương tiện thanh toán theo thành phần"
-    subtitle = "% tăng, so cùng kỳ"
-    full_title = f"{title_core} {period} ({subtitle})"
+    
 
     sns.set_theme(style="white", font="Times New Roman")
 
@@ -63,8 +61,7 @@ def make_figure_M_M2(fig_no=None, save=False):
             label=c,
             alpha=0.8
         )
-    
-    
+        
     ax.plot(
         df_line["date"],
         df_line["D12_M2"],
@@ -73,7 +70,8 @@ def make_figure_M_M2(fig_no=None, save=False):
         linewidth=1.8,
         label="Tổng phương tiện thanh toán"
     )
-
+    
+    subtitle = "% tăng, so cùng kỳ"
     ax.set_title(f"Tốc độ tăng tổng phương tiện thanh toán theo thành phần, {period} ({subtitle})",fontsize=14, fontweight="bold")
 
     ax.set_xlabel("")
