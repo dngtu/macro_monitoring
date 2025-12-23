@@ -56,7 +56,7 @@ def make_figure_IT(fig_no=None, save=False):
     )
 
     fig.text(0.01, 0.01, f"{source_a}\n{note}",
-             ha="left", va="bottom", fontsize=11)
+             ha="left", va="bottom", fontsize=9)
 
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
