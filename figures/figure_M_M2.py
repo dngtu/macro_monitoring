@@ -41,8 +41,6 @@ def make_figure_M_M2(fig_no=None, save=False):
 
     period = f"{m_start}/{y_start}-{m_max}/{y_max}"
  
-    
-
     sns.set_theme(style="white", font="Times New Roman")
 
     fig, ax = plt.subplots(figsize=(10, 8), dpi=200)
@@ -72,7 +70,7 @@ def make_figure_M_M2(fig_no=None, save=False):
     )
     
     subtitle = "% tăng, so cùng kỳ"
-    ax.set_title(f"Tăng tổng phương tiện thanh toán theo thành phần, {period} ({subtitle})",fontsize=14, fontweight="bold")
+    ax.set_title(f"Tổng phương tiện thanh toán, {period} ({subtitle})",fontsize=14, fontweight="bold")
 
     ax.set_xlabel("")
     ax.set_ylabel("")
