@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -13,8 +14,6 @@ def make_figure_M_M2(fig_no=None, save=False):
     # Tính đóng góp cho tăng trưởng M2
 
     components = ["M2","Firm_deposits","Household_deposits","Currency","Commercial_papers",]
-
-     df = df.sort_values(["date"])
     
     for c in components:
         df[f"D12_{c}"] = (df[c] - df[c].shift(12)) / df["M2"].shift(12) * 100
@@ -52,16 +51,26 @@ def make_figure_M_M2(fig_no=None, save=False):
     df_line = df.loc[df["date"] >= start_date, ["date", "D12_M2"]]
     df_long = df_long.loc[df_long["date"] >= start_date]
 
+    pos_bottom = np.zeros(len(df_line))
+    neg_bottom = np.zeros(len(df_line))
+
     for c in components_order:
-        tmp = df_long[df_long["component"] == c]
+        tmp = df_long[df_long["component"] == c].sort_values("date")
+        v = tmp["value"].values
+
         ax.bar(
             tmp["date"],
-            tmp["value"],
+            v,
+            bottom=np.where(v >= 0, pos_bottom, neg_bottom),
             width=20,
             label=c,
             alpha=0.8
         )
-        
+
+        pos_bottom += np.where(v >= 0, v, 0)
+        neg_bottom += np.where(v < 0, v, 0)
+
+    
     ax.plot(
         df_line["date"],
         df_line["D12_M2"],
@@ -70,7 +79,7 @@ def make_figure_M_M2(fig_no=None, save=False):
         linewidth=1.8,
         label="Tổng phương tiện thanh toán"
     )
-    
+
     subtitle = "%, so cùng kỳ"
     ax.set_title(f"Tốc độ tăng tổng phương tiện thanh toán, {period} ({subtitle})",fontsize=14, fontweight="bold")
 
