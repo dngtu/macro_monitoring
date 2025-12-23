@@ -74,7 +74,7 @@ def make_figure_M_M2(fig_no=None, save=False):
     ax.plot(
         df_line["date"],
         df_line["D12_M2"],
-        color="black",
+        color="red",
         marker="o",
         linewidth=1.8,
         label="Tổng phương tiện thanh toán"
