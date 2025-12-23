@@ -71,8 +71,8 @@ def make_figure_M_M2(fig_no=None, save=False):
         label="Tổng phương tiện thanh toán"
     )
     
-    subtitle = "% tăng, so cùng kỳ"
-    ax.set_title(f"Tổng phương tiện thanh toán, {period} ({subtitle})",fontsize=14, fontweight="bold")
+    subtitle = "%, so cùng kỳ"
+    ax.set_title(f"Tốc độ tăng tổng phương tiện thanh toán, {period} ({subtitle})",fontsize=14, fontweight="bold")
 
     ax.set_xlabel("")
     ax.set_ylabel("")
