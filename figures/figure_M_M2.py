@@ -13,6 +13,8 @@ def make_figure_M_M2(fig_no=None, save=False):
     # Tính đóng góp cho tăng trưởng M2
 
     components = ["M2","Firm_deposits","Household_deposits","Currency","Commercial_papers",]
+
+     df = df.sort_values(["date"])
     
     for c in components:
         df[f"D12_{c}"] = (df[c] - df[c].shift(12)) / df["M2"].shift(12) * 100
