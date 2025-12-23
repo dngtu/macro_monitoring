@@ -41,7 +41,7 @@ def make_figure_M_M2(fig_no=None, save=False):
 
     period = f"{m_start}/{y_start}-{m_max}/{y_max}"
  
-    title_core = "Tốc độ tăng tổng phương tiện thanh toán theo thành phần"
+    title_core = "Tăng tổng phương tiện thanh toán theo thành phần"
     subtitle = "% tăng, so cùng kỳ"
     full_title = f"{title_core} {period} ({subtitle})"
 
