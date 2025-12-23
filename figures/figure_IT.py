@@ -55,7 +55,7 @@ def make_figure_IT(fig_no=None, save=False):
         "và vốn của DNNN cùng các nguồn khác."
     )
 
-    fig.text(0.01, 0.02, f"{source_a}\n{note}",
+    fig.text(0.01, 0.01, f"{source_a}\n{note}",
              ha="left", va="bottom", fontsize=11)
 
     ax.spines["top"].set_visible(False)
