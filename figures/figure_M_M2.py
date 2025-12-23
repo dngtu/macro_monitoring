@@ -44,7 +44,7 @@ def make_figure_M_M2(fig_no=None, save=False):
  
     sns.set_theme(style="white", font="Times New Roman")
 
-    fig, ax = plt.subplots(figsize=(10, 8), dpi=200)
+    fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 
     start_date = pd.Timestamp(year=y_start, month=m_start, day=1)
 
