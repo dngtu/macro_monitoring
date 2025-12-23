@@ -41,7 +41,7 @@ def make_figure_IT(fig_no=None, save=False):
         labels = [f"{v.get_height():.1f}" for v in container]
         ax.bar_label(container, labels=labels, fontsize=10, padding=5)
 
-    ax.set_title(full_title, fontsize=14, fontweight="bold")
+    ax.set_title(f"Vốn đầu tư toàn xã hội {timeframe}, ({subtitle})", fontsize=14, fontweight="bold")
     ax.set_xlabel("")
     ax.set_ylabel("")
     ax.tick_params(axis="x", labelsize=10)
