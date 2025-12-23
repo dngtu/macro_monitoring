@@ -72,7 +72,7 @@ def make_figure_M_M2(fig_no=None, save=False):
     )
     
     subtitle = "% tăng, so cùng kỳ"
-    ax.set_title(f"Tốc độ tăng tổng phương tiện thanh toán theo thành phần, {period} ({subtitle})",fontsize=14, fontweight="bold")
+    ax.set_title(f"Tăng tổng phương tiện thanh toán theo thành phần, {period} ({subtitle})",fontsize=14, fontweight="bold")
 
     ax.set_xlabel("")
     ax.set_ylabel("")
