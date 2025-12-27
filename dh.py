@@ -1,7 +1,7 @@
 import streamlit as st
 from ui import render_title
 
-tab_gdp, tab_cpi, tab_invest, tab_money = st.tabs(["GDP", "CPI", "Investment", "Money"])
+tab_gdp, tab_invest, tab_money = st.tabs(["GDP", "Investment", "Money"])
 
 from figures.figure_GDP_P import make_figure_GDP_P
 from figures.figure_IT import make_figure_IT
@@ -38,4 +38,5 @@ with tab_money:
     
     fig, title = make_figure_M_M2()
     render_title(title)
+
     st.pyplot(fig)
