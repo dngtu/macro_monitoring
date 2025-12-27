@@ -146,8 +146,8 @@ def make_figure_GDP_P(fig_no=None, save=False):
     fig.tight_layout()
     fig.subplots_adjust(top=0.8, bottom=0.12)
 
-
     return fig, title
+
 
 
 
