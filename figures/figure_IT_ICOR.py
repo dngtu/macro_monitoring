@@ -18,7 +18,7 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
     # Parameters & Labels
     # ===============================================================================================
 
-    y_start = 2018
+    y_start = 2019
     period = f"{y_start}-{y_max}"
 
     # ===============================================================================================
@@ -97,3 +97,4 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
 
 
     return fig, title
+
