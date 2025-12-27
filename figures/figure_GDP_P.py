@@ -55,7 +55,7 @@ def make_figure_GDP_P(fig_no=None, save=False):
     # Figure setup 
     # ===============================================================================================
 
-    sns.set_theme(style="white", font="Roboto")
+    sns.set_theme(style="white", font="DejaVu Sans")
     fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 
     # ===============================================================================================
@@ -148,3 +148,4 @@ def make_figure_GDP_P(fig_no=None, save=False):
 
 
     return fig, title
+
