@@ -55,7 +55,7 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
 
     sns.barplot(
         data=df_long,
-        x="year",y="value",hue="sector",
+        x="year", y="value", hue="sector",
         errorbar=None,
         ax=ax
     )
@@ -95,5 +95,6 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
 
 
     return fig, title
+
 
 
