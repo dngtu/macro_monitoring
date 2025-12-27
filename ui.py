@@ -9,11 +9,12 @@ def render_title(title: str):
             text-align:center;
             font-size:16px;
             font-weight:600;
-            font-family:'Times New Roman', Times, serif;
+            font-family: 'DejaVu Sans', 'DejaVuSans', sans-serif;
             margin-bottom:8px;
         ">
             {title}
         </div>
         """,
         unsafe_allow_html=True,
+
     )
