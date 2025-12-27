@@ -44,8 +44,6 @@ def make_figure_IT(fig_no=None, save=False):
     sns.barplot(
         data=df,
         x="item", y="D4_ITN_A", hue="year",
-        ci=None,
-        palette="muted",
         edgecolor="none",
         ax=ax
     )
@@ -102,4 +100,5 @@ def make_figure_IT(fig_no=None, save=False):
     fig.subplots_adjust(top=0.8, bottom=0.2)
 
     return fig, title
+
 
