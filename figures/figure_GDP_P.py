@@ -106,7 +106,7 @@ def make_figure_GDP_P(fig_no=None, save=False):
             f"{y:.1f}",      # định dạng số (1 chữ số thập phân)
             ha="center",
             va="center",
-            fontsize=12,
+            fontsize=11,
             color="white",   
             fontweight="bold",
             zorder=5,        # đảm bảo nằm trên marker
@@ -148,4 +148,5 @@ def make_figure_GDP_P(fig_no=None, save=False):
 
 
     return fig, title
+
 
