@@ -46,7 +46,7 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
     # Figure setup 
     # ===============================================================================================
     
-    sns.set_theme(style="white", font="Times New Roman")
+    sns.set_theme(style="white", font="DejaVu Sans")
     fig, ax = plt.subplots(figsize=(10, 6), dpi=200)
 
     # ===============================================================================================
@@ -94,5 +94,6 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
 
     fig.tight_layout()
     fig.subplots_adjust(top=0.8, bottom=0.2)
+
 
     return fig, title
