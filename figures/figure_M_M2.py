@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from ui import author
+from ui import author, axis_style
 
 def make_figure_M_M2(fig_no=None, save=False):
 
@@ -102,22 +102,7 @@ def make_figure_M_M2(fig_no=None, save=False):
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=3, fontsize=14, frameon=False)
     fig.text(0.01, 0.02, source, ha="left", va="bottom", fontsize=14)
 
-    # ===============================================================================================
-    # Axis style
-    # ===============================================================================================
-
-    plt.xticks(fontsize=14)
-    plt.yticks(fontsize=14)
-    ax.set_xlabel(None)
-    ax.set_ylabel(None)
-    ax.spines["top"].set_visible(False)
-    ax.spines["left"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    ax.spines["bottom"].set_linewidth(0.6)
-    ax.grid(axis="y", alpha=0.5, linewidth=0.8)
-
-    fig.tight_layout()
-    fig.subplots_adjust(top=0.8, bottom=0.12)
-
+    axis_style(ax, fig)
 
     return fig, title
+
