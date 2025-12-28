@@ -83,9 +83,10 @@ def make_figure_IT(fig_no=None, save=False):
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=14, frameon=False)
     fig.text(0.01, 0, f"{source}\n{note_wrapped}", ha="left", va="bottom", fontsize=14)
     
-    apply_axis_style(ax, fig)
+    axis_style(ax, fig)
 
     return fig, title
+
 
 
 
