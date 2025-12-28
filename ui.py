@@ -16,6 +16,6 @@ def render_title(title: str):
         </div>
         """,
         unsafe_allow_html=True,
-
     )
+
 
