@@ -37,13 +37,14 @@ def axis_style(
 
     for spine in ["top", "left", "right"]:
         ax.spines[spine].set_visible(False)
-    ax.spines["bottom"].set_linewidth(spine_width)
+        ax.spines["bottom"].set_linewidth(spine_width)
     
     ax.grid(axis="y", alpha=grid_alpha, linewidth=grid_width)
 
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=bottom)
+
 
 
 
