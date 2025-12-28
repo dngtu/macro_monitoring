@@ -45,6 +45,7 @@ def make_figure_IT(fig_no=None, save=False):
         data=df,
         x="item", y="D4_ITN_A", hue="year",
         edgecolor="none",
+        palette="palette",
         ax=ax
     )
 
@@ -100,5 +101,6 @@ def make_figure_IT(fig_no=None, save=False):
     fig.subplots_adjust(top=0.8, bottom=0.2)
 
     return fig, title
+
 
 
