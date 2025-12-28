@@ -1,6 +1,6 @@
 import streamlit as st
 
-author = "Đặng Ngọc Tú"
+author = "Đ.N.Tú"
 
 def render_title(title: str):
     st.markdown(
@@ -17,6 +17,7 @@ def render_title(title: str):
         """,
         unsafe_allow_html=True,
     )
+
 
 
 
