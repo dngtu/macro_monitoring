@@ -18,6 +18,32 @@ def render_title(title: str):
         unsafe_allow_html=True,
     )
 
+def axis_style(
+    ax,
+    fig=None,
+    *,
+    tick_size=14,
+    spine_width=0.6,
+    grid_alpha=0.5,
+    grid_width=0.8,
+    top=0.8,
+    bottom=0.12
+):
+    ax.tick_params(axis="x", labelsize=tick_size)
+    ax.tick_params(axis="y", labelsize=tick_size)
+    
+    ax.set_xlabel(None)
+    ax.set_ylabel(None)
+
+    for spine in ["top", "left", "right"]:
+        ax.spines[spine].set_visible(False)
+    ax.spines["bottom"].set_linewidth(spine_width)
+    
+    ax.grid(axis="y", alpha=grid_alpha, linewidth=grid_width)
+
+    if fig is not None:
+        fig.tight_layout()
+        fig.subplots_adjust(top=top, bottom=bottom)
 
 
 
