@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import textwrap
-from ui import author
+from ui import author, axis_style
 
 def make_figure_IT_ICOR(fig_no=None, save=False):
 
@@ -76,25 +76,10 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=14, frameon=False)
     fig.text(0.01, 0, f"{source}\n{note_wrapped}", ha="left", va="bottom", fontsize=14)
 
-    # ===============================================================================================
-    # Axis style
-    # ===============================================================================================
-
-    plt.xticks(fontsize=14)
-    plt.yticks(fontsize=14)
-    ax.set_xlabel(None)
-    ax.set_ylabel(None)
-    ax.spines["top"].set_visible(False)
-    ax.spines["left"].set_visible(False)
-    ax.spines["right"].set_visible(False)
-    ax.spines["bottom"].set_linewidth(0.6)
-    ax.grid(axis="y", alpha=0.5, linewidth=0.8)
-
-    fig.tight_layout()
-    fig.subplots_adjust(top=0.8, bottom=0.2)
-
-
+    axis_style(ax, fig)
+   
     return fig, title
+
 
 
 
