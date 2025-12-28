@@ -7,7 +7,7 @@ def render_title(title: str):
         f"""
         <div style="
             text-align:center;
-            font-size:16px;
+            font-size:14px;
             font-weight:600;
             font-family: 'DejaVu Sans', 'DejaVuSans', sans-serif;
             margin-bottom:8px;
@@ -18,3 +18,4 @@ def render_title(title: str):
         unsafe_allow_html=True,
 
     )
+
