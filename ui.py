@@ -18,6 +18,24 @@ def render_title(title: str):
         unsafe_allow_html=True,
     )
 
+def source(
+    fig,
+    source: str,
+    note: str | None = None,
+    x: float = 0.01,
+    y: float = 0.02,
+    fontsize: int = 14,
+):
+    text = source if note is None else f"{source}\nNote: {note}"
+    fig.text(
+        x,
+        y,
+        text,
+        ha="left",
+        va="bottom",
+        fontsize=fontsize,
+    )
+
 def axis_style(
     ax,
     fig=None,
