@@ -95,7 +95,6 @@ def make_figure_M_M2(fig_no=None, save=False):
     # ===============================================================================================
 
     sub = "%, so cùng kỳ"  # đơn vị
-
     title = f"Tốc độ tăng tổng phương tiện thanh toán, {period} ({sub})"
     source = f"Nguồn: CTK; và tính toán của {author}."
     
@@ -105,4 +104,5 @@ def make_figure_M_M2(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
