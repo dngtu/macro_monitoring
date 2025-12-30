@@ -67,35 +67,29 @@ def make_figure_M_M4(fig_no=None, save=False):
     neg_bottom = np.zeros(len(df_line))
 
     for c in components_order:
-        # align component series to df_line years
-        tmp = (
-            df_long[df_long["component"] == c]
-            .set_index("date")
-            .reindex(df_line["date"])
-            .fillna(0)
-        )
-
+        tmp = df_long[df_long["component"] == c].sort_values("date")
         v = tmp["value"].values
 
         ax.bar(
-        df_line["date"],
-        v,
-        bottom=np.where(v >= 0, pos_bottom, neg_bottom),
-        label=c,
-        alpha=0.8,
-        edgecolor="none",
+            tmp["date"],
+            v,
+            bottom=np.where(v >= 0, pos_bottom, neg_bottom),
+            width=20,
+            label=c,
+            alpha=0.8,
+            edgecolor="none"
         )
 
         pos_bottom += np.where(v >= 0, v, 0)
         neg_bottom += np.where(v < 0, v, 0)
-    
+
     ax.plot(
         df_line["date"],
         df_line["d12_m4"],
         color="red",
         marker="o",
         linewidth=1.8,
-        label="Tổng tín dụng"
+        label="Tổng số"
     )
 
     # ===============================================================================================
@@ -112,6 +106,7 @@ def make_figure_M_M4(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
