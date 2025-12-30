@@ -7,6 +7,7 @@ from figures.figure_GDP_P import make_figure_GDP_P
 from figures.figure_IT import make_figure_IT
 from figures.figure_IT_ICOR import make_figure_IT_ICOR
 from figures.figure_M_M2 import make_figure_M_M2
+from figures.figure_M_M4 import make_figure_M_M4
 
 with tab_gdp:
     st.header("GDP")
@@ -46,4 +47,5 @@ with tab_money:
         fig, title = make_figure_M_M4()
         render_title(title)
         st.pyplot(fig)
+
 
