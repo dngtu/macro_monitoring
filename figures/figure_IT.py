@@ -79,12 +79,12 @@ def make_figure_IT(fig_no=None, save=False):
         "(từ NSNN và tín dụng đầu tư của Nhà nước) "
         "và vốn của DNNN cùng các nguồn khác."
     )
-    note_wrapped = textwrap.fill(note, width=120)
-    source_note(fig, source=f"Nguồn: CTK; và tính toán của {author}.",note=note_wrapped)
+    source_note(fig, source=f"Nguồn: CTK; và tính toán của {author}.",note=note)
     
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
