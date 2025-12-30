@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import textwrap
-from ui import author, source_note, axis_style
+from ui import author, legend, source_note, axis_style
 
 def make_figure_IT_ICOR(fig_no=None, save=False):
 
@@ -68,7 +68,7 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
 
     title = f"Hiệu quả đầu tư (ICOR) theo khu vực kinh tế, {y_start}-{y_max} ({sub})"
 
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=12, frameon=False)
+    legend(ax, ncol=4)
 
     note = ("Chú thích: Vốn Nhà nước gồm vốn đầu tư công "
             "(từ NSNN và tín dụng đầu tư của Nhà nước) "
@@ -79,6 +79,7 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
     axis_style(ax, fig)
    
     return fig, title
+
 
 
 
