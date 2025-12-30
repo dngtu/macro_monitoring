@@ -70,8 +70,8 @@ def make_figure_M_M4(fig_no=None, save=False):
         # align component series to df_line years
         tmp = (
             df_long[df_long["component"] == c]
-            .set_index("year")
-            .reindex(df_line["year"])
+            .set_index("date")
+            .reindex(df_line["date"])
             .fillna(0)
         )
 
@@ -133,6 +133,7 @@ def make_figure_M_M4(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
