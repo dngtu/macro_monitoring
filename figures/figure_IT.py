@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import textwrap
-from ui import author, source_note, axis_style
+from ui import author, legend, source_note, axis_style
 
 def make_figure_IT(fig_no=None, save=False):
     
@@ -72,7 +72,7 @@ def make_figure_IT(fig_no=None, save=False):
         m = 3 * q_max
         title = f"Vốn đầu tư toàn xã hội {m} tháng đầu năm, {period} ({sub})"
     
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=12, frameon=False)
+    legend(ax, ncol=4)
 
     note = (
         "Chú thích: Vốn Nhà nước gồm vốn đầu tư công "
@@ -84,6 +84,7 @@ def make_figure_IT(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
