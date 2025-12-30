@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from ui import author, source_note, axis_style
+from ui import author, legend, source_note, axis_style
 
 def make_figure_M_M2(fig_no=None, save=False):
 
@@ -97,13 +97,14 @@ def make_figure_M_M2(fig_no=None, save=False):
     sub = "%, so cùng kỳ"  # đơn vị
     title = f"Tốc độ tăng tổng phương tiện thanh toán, {period} ({sub})"
     
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=3, fontsize=14, frameon=False)
+    legend(ax, ncol=4)
     
     source_note(fig, source=f"Nguồn: NHNN; và tính toán của {author}.")
 
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
