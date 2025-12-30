@@ -72,7 +72,7 @@ def make_figure_IT(fig_no=None, save=False):
         m = 3 * q_max
         title = f"Vốn đầu tư toàn xã hội {m} tháng đầu năm, {period} ({sub})"
     
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=14, frameon=False)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=12, frameon=False)
 
     note = (
         "Chú thích: Vốn Nhà nước gồm vốn đầu tư công "
@@ -84,6 +84,7 @@ def make_figure_IT(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
