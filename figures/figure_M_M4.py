@@ -99,20 +99,6 @@ def make_figure_M_M4(fig_no=None, save=False):
         label="Tổng tín dụng"
     )
 
-    # --- add value inside marker ---
-    for x, y in zip(df_line["date"], df_line["d12_m4"]):
-        ax.text(
-            x,
-            y,
-            f"{y:.1f}",      # định dạng số (1 chữ số thập phân)
-            ha="center",
-            va="center",
-            fontsize=12,
-            color="white",   
-            fontweight="bold",
-            zorder=5,        # đảm bảo nằm trên marker
-        )
-
     # ===============================================================================================
     # Title, legend, source
     # ===============================================================================================
@@ -127,6 +113,7 @@ def make_figure_M_M4(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
