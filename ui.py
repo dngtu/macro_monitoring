@@ -44,7 +44,7 @@ def source_note(
     fig.subplots_adjust(bottom=0.22 if has_note else 0.14)
 
     # Vị trí source (luôn gần đồ thị)
-    y_source = 0.09 if has_note else 0.07
+    y_source = 0.05 if has_note else 0.07
 
     fig.text(
         0.01,
@@ -63,7 +63,7 @@ def source_note(
             note,
             ha="left",
             va="bottom",
-            fontsize=11,
+            fontsize=12,
             wrap=True,
         )
 
@@ -93,6 +93,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=0.22)
+
 
 
 
