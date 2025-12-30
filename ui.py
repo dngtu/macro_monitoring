@@ -34,6 +34,7 @@ def source_note(
         ha="left",
         va="bottom",
         fontsize=fontsize,
+        wrap=True
     )
 
 def axis_style(
@@ -62,6 +63,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=bottom)
+
 
 
 
