@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from ui import author, legend_style, source_note, axis_style
+from ui import author, legend, source_note, axis_style
 
 def make_figure_GDP_P(fig_no=None, save=False):
 
@@ -124,13 +124,14 @@ def make_figure_GDP_P(fig_no=None, save=False):
         m = 3 * q_max
         title = f"Tăng trưởng GDP theo khu vực sản xuất {m} tháng đầu năm, {period} ({sub})"
 
-    legend_style(ax, ncol=3)
+    legend(ax, ncol=4)
 
     source_note(fig, source=f"Nguồn: CTK; và tính toán của {author}.")
  
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
