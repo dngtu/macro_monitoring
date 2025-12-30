@@ -18,8 +18,6 @@ def render_title(title: str):
         unsafe_allow_html=True,
     )
 
-# ui/styles.py
-
 def figure_style(
     fig,
     *,
@@ -79,6 +77,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=bottom)
+
 
 
 
