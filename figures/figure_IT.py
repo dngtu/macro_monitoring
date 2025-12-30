@@ -72,7 +72,6 @@ def make_figure_IT(fig_no=None, save=False):
         m = 3 * q_max
         title = f"Vốn đầu tư toàn xã hội {m} tháng đầu năm, {period} ({sub})"
 
-    source = f"Nguồn: CTK; và tính toán của {author}."
     note = (
         "Chú thích: Vốn Nhà nước gồm vốn đầu tư công "
         "(từ NSNN và tín dụng đầu tư của Nhà nước) "
@@ -81,11 +80,13 @@ def make_figure_IT(fig_no=None, save=False):
     note_wrapped = textwrap.fill(note, width=120)
     
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=14, frameon=False)
-    fig.text(0.01, 0, f"{source}\n{note_wrapped}", ha="left", va="bottom", fontsize=14)
+    
+    source_note(fig, source=f"Nguồn: CTK; và tính toán của {author}.",note=note_wrapped)
     
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
