@@ -18,7 +18,7 @@ def render_title(title: str):
         unsafe_allow_html=True,
     )
     
-def legend_style(
+def legend(
     ax,
     ncol: int = 4,
     fontsize: int = 12,
@@ -93,6 +93,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=0.22)
+
 
 
 
