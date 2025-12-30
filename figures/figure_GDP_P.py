@@ -113,11 +113,11 @@ def make_figure_GDP_P(fig_no=None, save=False):
         )
 
     # ===============================================================================================
-    # Title, legend, source
+    # Title, legend, source, axis
     # ===============================================================================================
     
-    sub = "%, so cùng kỳ"  # đơn vị
-
+    sub = "%, so cùng kỳ" 
+    
     if q_max == 4:
         title = f"Tăng trưởng GDP theo khu vực sản xuất, {period} ({sub})"
     else: 
@@ -131,6 +131,7 @@ def make_figure_GDP_P(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
