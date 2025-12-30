@@ -96,14 +96,15 @@ def make_figure_M_M2(fig_no=None, save=False):
 
     sub = "%, so cùng kỳ"  # đơn vị
     title = f"Tốc độ tăng tổng phương tiện thanh toán, {period} ({sub})"
-    source = f"Nguồn: NHNN; và tính toán của {author}."
     
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=3, fontsize=14, frameon=False)
-    fig.text(0.01, 0.02, source, ha="left", va="bottom", fontsize=14)
+    
+    source_note(fig, source=f"Nguồn: NHNN; và tính toán của {author}.",note=note_wrapped)
 
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
