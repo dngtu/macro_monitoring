@@ -22,20 +22,36 @@ def source_note(
     fig,
     source: str,
     note: str | None = None,
-    x: float = 0.01,
-    y: float = 0.02,
     fontsize: int = 14,
 ):
-    text = source if note is None else f"{source}\nNote: {note}"
+    has_note = bool(note)
+
+    # Điều chỉnh layout: có note thì chừa nhiều hơn
+    fig.subplots_adjust(bottom=0.22 if has_note else 0.14)
+
+    # Vị trí source (luôn gần đồ thị)
+    y_source = 0.09 if has_note else 0.07
+
     fig.text(
-        x,
-        y,
-        text,
+        0.01,
+        y_source,
+        source,
         ha="left",
         va="bottom",
         fontsize=fontsize,
-        wrap=True
     )
+
+    # Vị trí note (chỉ vẽ khi có)
+    if has_note:
+        fig.text(
+            0.01,
+            0.04,
+            note,
+            ha="left",
+            va="bottom",
+            fontsize=fontsize - 2,
+            wrap=True,
+        )
 
 def axis_style(
     ax,
@@ -63,6 +79,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=0.22)
+
 
 
 
