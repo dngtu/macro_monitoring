@@ -126,11 +126,12 @@ def make_figure_GDP_P(fig_no=None, save=False):
 
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=3, fontsize=14, frameon=False)
 
-    note(fig, source=f"Nguồn: CTK; và tính toán của {author}.")
+    source_note(fig, source=f"Nguồn: CTK; và tính toán của {author}.")
  
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
