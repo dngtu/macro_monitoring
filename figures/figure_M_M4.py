@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from ui import author
+from ui import author, axis_style
 
 def make_figure_M_M4(fig_no=None, save=False):
 
@@ -146,5 +146,6 @@ def make_figure_M_M4(fig_no=None, save=False):
 
     fig.tight_layout()
     fig.subplots_adjust(top=0.8, bottom=0.12)
+
 
     return fig, title
