@@ -94,7 +94,6 @@ def make_figure_M_M4(fig_no=None, save=False):
         df_line["d12_m4"],
         color="red",
         marker="o",
-        markersize=20,
         linewidth=1.8,
         label="Tổng tín dụng"
     )
@@ -113,6 +112,7 @@ def make_figure_M_M4(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
