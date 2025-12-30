@@ -38,7 +38,7 @@ def source_note(
         source,
         ha="left",
         va="bottom",
-        fontsize=fontsize,
+        fontsize=12,
     )
 
     # Vị trí note (chỉ vẽ khi có)
@@ -49,7 +49,7 @@ def source_note(
             note,
             ha="left",
             va="bottom",
-            fontsize=fontsize - 2,
+            fontsize=11,
             wrap=True,
         )
 
@@ -57,7 +57,7 @@ def axis_style(
     ax,
     fig=None,
     *,
-    tick_size=14,
+    tick_size=10,
     spine_width=0.6,
     grid_alpha=0.5,
     grid_width=0.8,
@@ -79,6 +79,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=0.22)
+
 
 
 
