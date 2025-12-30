@@ -18,39 +18,6 @@ def render_title(title: str):
         unsafe_allow_html=True,
     )
 
-def figure_style(
-    fig,
-    *,
-    source=None,
-    note=None,
-    source_pos=(0.01, 0.02),
-    fontsize=14,
-    top=0.8,
-    bottom=0.12
-):
-    if source:
-        fig.text(
-            source_pos[0],
-            source_pos[1],
-            source,
-            ha="left",
-            va="bottom",
-            fontsize=fontsize
-        )
-
-    if note:
-        fig.text(
-            source_pos[0],
-            source_pos[1] - 0.035,
-            note,
-            ha="left",
-            va="bottom",
-            fontsize=fontsize
-        )
-
-    fig.tight_layout()
-    fig.subplots_adjust(top=top, bottom=bottom)
-
 def axis_style(
     ax,
     fig=None,
@@ -77,6 +44,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=bottom)
+
 
 
 
