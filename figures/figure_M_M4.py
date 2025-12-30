@@ -90,13 +90,13 @@ def make_figure_M_M4(fig_no=None, save=False):
         neg_bottom += np.where(v < 0, v, 0)
     
     ax.plot(
-        df_line["year"],
-        df_line["d4_gdp"],
+        df_line["date"],
+        df_line["d12_m4"],
         color="red",
         marker="o",
         markersize=20,
         linewidth=1.8,
-        label="GDP"
+        label="Tổng tín dụng"
     )
 
     # --- add value inside marker ---
@@ -133,6 +133,7 @@ def make_figure_M_M4(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
