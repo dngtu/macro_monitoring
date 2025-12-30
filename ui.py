@@ -22,7 +22,7 @@ def source_note(
     fig,
     source: str,
     note: str | None = None,
-    fontsize: int = 14,
+    fontsize: int = 12,
 ):
     has_note = bool(note)
 
@@ -79,6 +79,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=0.22)
+
 
 
 
