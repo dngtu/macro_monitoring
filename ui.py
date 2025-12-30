@@ -17,6 +17,20 @@ def render_title(title: str):
         """,
         unsafe_allow_html=True,
     )
+    
+def legend_style(
+    ax,
+    ncol: int = 4,
+    fontsize: int = 12,
+    y: float = 1.25,
+):
+    ax.legend(
+        loc="upper center",
+        bbox_to_anchor=(0.5, y),
+        ncol=ncol,
+        fontsize=fontsize,
+        frameon=False,
+    )
 
 def source_note(
     fig,
@@ -79,6 +93,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=0.22)
+
 
 
 
