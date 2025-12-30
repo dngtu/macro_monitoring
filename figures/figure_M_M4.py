@@ -78,7 +78,7 @@ def make_figure_M_M4(fig_no=None, save=False):
         v = tmp["value"].values
 
         ax.bar(
-        df_line["year"],
+        df_line["date"],
         v,
         bottom=np.where(v >= 0, pos_bottom, neg_bottom),
         label=c,
@@ -100,7 +100,7 @@ def make_figure_M_M4(fig_no=None, save=False):
     )
 
     # --- add value inside marker ---
-    for x, y in zip(df_line["year"], df_line["d4_gdp"]):
+    for x, y in zip(df_line["date"], df_line["d12_m4"]):
         ax.text(
             x,
             y,
@@ -118,14 +118,8 @@ def make_figure_M_M4(fig_no=None, save=False):
     # ===============================================================================================
     
     sub = "%, so cùng kỳ"  # đơn vị
-
-    if q_max == 4:
-        title = f"Tăng trưởng GDP theo khu vực sản xuất, {period} ({sub})"
-    else: 
-        m = 3 * q_max
-        title = f"Tăng trưởng GDP theo khu vực sản xuất {m} tháng đầu năm, {period} ({sub})"
-
-    source = f"Nguồn: CTK; và tính toán của {author}."
+    title = f"Tăng trưởng GDP theo khu vực sản xuất, {period} ({sub})"
+    source = f"Nguồn: NHNN; và tính toán của {author}."
     
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=3, fontsize=14, frameon=False)
     fig.text(0.01, 0.02, source, ha="left", va="bottom", fontsize=14)
@@ -133,6 +127,7 @@ def make_figure_M_M4(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
