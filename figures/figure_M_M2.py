@@ -99,11 +99,12 @@ def make_figure_M_M2(fig_no=None, save=False):
     
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=3, fontsize=14, frameon=False)
     
-    source_note(fig, source=f"Nguồn: NHNN; và tính toán của {author}.",note=note_wrapped)
+    source_note(fig, source=f"Nguồn: NHNN; và tính toán của {author}.")
 
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
