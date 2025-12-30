@@ -35,7 +35,7 @@ with tab_invest:
 
 with tab_money:  
     st.header("Cung tiền")
-    tab_money_M2, tab_money_M3 = st.tabs(["Tổng phương tiện thanh toán", "Tín dụng"])
+    tab_money_M2, tab_money_M4 = st.tabs(["Tổng phương tiện thanh toán", "Tín dụng"])
 
     with tab_money_M2:
         fig, title = make_figure_M_M2()
@@ -46,3 +46,4 @@ with tab_money:
         fig, title = make_figure_M_M4()
         render_title(title)
         st.pyplot(fig)
+
