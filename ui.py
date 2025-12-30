@@ -18,7 +18,7 @@ def render_title(title: str):
         unsafe_allow_html=True,
     )
 
-def source(
+def source_note(
     fig,
     source: str,
     note: str | None = None,
@@ -62,6 +62,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=bottom)
+
 
 
 
