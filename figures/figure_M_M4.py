@@ -12,7 +12,7 @@ def make_figure_M_M4(fig_no=None, save=False):
     
     df = pd.read_pickle("data/M_M4.pkl").sort_values(["year", "month"])
 
-    q_max = df["month"].iloc[-1]
+    m_max = df["month"].iloc[-1]
     y_max = df["year"].iloc[-1]
 
     # ===============================================================================================
@@ -133,4 +133,5 @@ def make_figure_M_M4(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
