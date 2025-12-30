@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-from ui import author, axis_style
+from ui import author, source_note, axis_style
 
 def make_figure_M_M2(fig_no=None, save=False):
 
@@ -104,6 +104,7 @@ def make_figure_M_M2(fig_no=None, save=False):
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
