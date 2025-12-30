@@ -61,7 +61,7 @@ def make_figure_IT(fig_no=None, save=False):
         )
 
     # ===============================================================================================
-    # Title, legend, source
+    # Title, legend, source, axis
     # ===============================================================================================
 
     sub = "% tăng, so cùng kỳ"
@@ -71,6 +71,8 @@ def make_figure_IT(fig_no=None, save=False):
     else: 
         m = 3 * q_max
         title = f"Vốn đầu tư toàn xã hội {m} tháng đầu năm, {period} ({sub})"
+    
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=14, frameon=False)
 
     note = (
         "Chú thích: Vốn Nhà nước gồm vốn đầu tư công "
@@ -78,14 +80,12 @@ def make_figure_IT(fig_no=None, save=False):
         "và vốn của DNNN cùng các nguồn khác."
     )
     note_wrapped = textwrap.fill(note, width=120)
-    
-    ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=14, frameon=False)
-    
     source_note(fig, source=f"Nguồn: CTK; và tính toán của {author}.",note=note_wrapped)
     
     axis_style(ax, fig)
 
     return fig, title
+
 
 
 
