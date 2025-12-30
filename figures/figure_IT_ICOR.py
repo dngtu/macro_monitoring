@@ -67,18 +67,19 @@ def make_figure_IT_ICOR(fig_no=None, save=False):
     sub = "% tăng, so cùng kỳ"
 
     title = f"Hiệu quả đầu tư (ICOR) theo khu vực kinh tế, {y_start}-{y_max} ({sub})"
-    source = f"Nguồn: CTK; và tính toán của {author}."
     note = ("Chú thích: Vốn Nhà nước gồm vốn đầu tư công "
             "(từ NSNN và tín dụng đầu tư của Nhà nước) "
             "và vốn của DNNN cùng các nguồn khác.")
     note_wrapped = textwrap.fill(note, width=120)
 
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, 1.25), ncol=4, fontsize=14, frameon=False)
-    fig.text(0.01, 0, f"{source}\n{note_wrapped}", ha="left", va="bottom", fontsize=14)
+    
+    source_note(fig, source=f"Nguồn: CTK; và tính toán của {author}.",note=note_wrapped)
 
     axis_style(ax, fig)
    
     return fig, title
+
 
 
 
