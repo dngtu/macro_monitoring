@@ -1,5 +1,15 @@
 import streamlit as st
 
+import matplotlib.pyplot as plt
+from matplotlib import font_manager
+
+font_manager.fontManager.addfont("assets/fonts/Inter-Regular.ttf")
+
+plt.rcParams.update({
+    "font.family": "Inter",
+    "axes.unicode_minus": False,
+})
+
 author = "Đ.N.T"
 
 def render_title(title: str):
@@ -93,6 +103,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=0.22)
+
 
 
 
