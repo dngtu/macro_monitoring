@@ -1,16 +1,22 @@
 import streamlit as st
 
-from matplotlib import font_manager
+from pathlib import Path
 import matplotlib.pyplot as plt
+from matplotlib import font_manager
 
-font_manager.fontManager.addfont("assets/fonts/Inter-Regular.ttf")
-font_manager.fontManager.addfont("assets/fonts/Inter-Bold.ttf")
-font_manager.fontManager.addfont("assets/fonts/Inter-SemiBold.ttf")
+BASE_DIR = Path(__file__).resolve().parent
+FONT_PATH = BASE_DIR / "assets" / "fonts" / "Inter-Regular.ttf"
+
+print("FONT PATH:", FONT_PATH)
+print("FONT EXISTS:", FONT_PATH.exists())
+
+font_manager.fontManager.addfont(str(FONT_PATH))
 
 plt.rcParams.update({
     "font.family": "Inter",
     "axes.unicode_minus": False,
 })
+
 
 author = "Đ.N.T"
 
@@ -105,6 +111,7 @@ def axis_style(
     if fig is not None:
         fig.tight_layout()
         fig.subplots_adjust(top=top, bottom=0.22)
+
 
 
 
